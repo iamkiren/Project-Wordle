@@ -31,7 +31,6 @@ function Game() {
 
   return (
     <>
-      {gameStatus}
       <GuessResults guessInputs={guessInputs} answer={answer} />
       <GuessInput handleGuessInput={handleGuessInput} gameStatus={gameStatus} />
 
