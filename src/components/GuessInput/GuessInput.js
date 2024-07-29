@@ -1,6 +1,6 @@
 import React from "react";
 
-function GuessInput({ handleGuessInput }) {
+function GuessInput({ handleGuessInput, gameStatus }) {
   const [guess, setGuess] = React.useState("");
 
   function handleSubmit(event) {
@@ -19,6 +19,7 @@ function GuessInput({ handleGuessInput }) {
         /*the min and max Length is not required but due to some browser error it will not work while using 
         yoUppercase sometimes here it will be overwritten by the pattern
         */
+        disabled={gameStatus !== "running"}
         minLength={5}
         maxLength={5}
         pattern="[a-zA-Z]{5}"
